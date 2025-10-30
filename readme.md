@@ -1,4 +1,4 @@
-# Memory Dumper
+# 👻 Memory Dumper
 
 Search for byte patterns in process memory. Works on Linux (ptrace) and macOS (Mach VM API).
 
