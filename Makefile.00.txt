@@ -1,0 +1,19 @@
+# Makefile
+CC = gcc
+CFLAGS = -Wall -Wextra -std=gnu99
+
+all: target_program memory_dumper
+
+target_program: target_program.c
+	$(CC) $(CFLAGS) -o target_program target_program.c
+
+memory_dumper: memory_dumper.c
+	$(CC) $(CFLAGS) -o memory_dumper memory_dumper.c
+
+clean:
+	rm -f target_program memory_dumper dump_*.bin
+
+run: all
+	./memory_dumper --launch-target
+
+.PHONY: all clean run
